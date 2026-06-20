@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { handleProxy } from './proxy';
+import { handleProxy } from './proxy.js';
 
 describe('CORS Proxy Service', () => {
   beforeEach(() => {

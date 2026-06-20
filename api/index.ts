@@ -1,4 +1,5 @@
-import { handleProxy } from '../src/handlers/proxy';
+import { handleProxy } from '../src/handlers/proxy.js';
+
 
 export default {
   async fetch(request: Request): Promise<Response> {

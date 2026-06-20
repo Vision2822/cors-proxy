@@ -1,4 +1,4 @@
-import { AppError } from '../utils/errors';
+import { AppError } from '../utils/errors.js';
 
 export function validateRequest(request: Request, origin: string | null): void {
   // 1. API Key Authentication Check

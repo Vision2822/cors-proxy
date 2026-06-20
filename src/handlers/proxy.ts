@@ -1,7 +1,7 @@
-import { validateRequest } from '../middlewares/auth';
-import { handleCorsPreflight, getCorsHeaders } from '../middlewares/cors';
-import { StructuredLogger } from '../utils/logger';
-import { AppError, handleRouteError } from '../utils/errors';
+import { validateRequest } from '../middlewares/auth.js'; 
+import { handleCorsPreflight, getCorsHeaders } from '../middlewares/cors.js'; 
+import { StructuredLogger } from '../utils/logger.js';
+import { AppError, handleRouteError } from '../utils/errors.js';
 import { Agent, setGlobalDispatcher } from 'undici';
 
 // Initialize global undici Agent with connection pooling optimization

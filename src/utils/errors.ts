@@ -1,4 +1,4 @@
-import { StructuredLogger } from './logger';
+import { StructuredLogger } from './logger.js';
 
 export class AppError extends Error {
   constructor(

@@ -96,11 +96,13 @@ export async function handleProxy(request: Request): Promise<Response> {
     });
 
     const isGetOrHead = ['GET', 'HEAD'].includes(method);
-    const fetchOptions: RequestInit = {
+    
+    // Explicitly intersection-type 'duplex' to bypass TypeScript's DOM limitation
+    const fetchOptions: RequestInit & { duplex?: 'half' } = {
       method,
       headers: targetHeaders,
       body: isGetOrHead ? null : request.body,
-      duplex: isGetOrHead ? undefined : 'half', // Required for body streaming in node environment
+      duplex: isGetOrHead ? undefined : 'half', // required for streaming requests in Node.js
       signal: combinedSignal,
     };
 
